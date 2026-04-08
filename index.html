@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- 声明文档类型为 HTML5，告诉浏览器用最新的标准来解析这个网页 -->
+
+<html lang="zh-CN">
+<!-- html 标签是整个网页的根元素，lang="zh-CN" 表示这是一个简体中文网页 -->
+
+<head>
+    <!-- head 标签包含网页的元数据（metadata），这些内容不会直接显示在页面上 -->
+
+    <meta charset="UTF-8">
+    <!-- 设置字符编码为 UTF-8，支持中文等各种语言字符 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 视口设置，让网页在手机上也能正常显示，width=device-width 表示宽度等于设备宽度 -->
+
+    <title>周末出门吗？</title>
+    <!-- 网页标题，会显示在浏览器标签页上 -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入外部 CSS 样式文件，用来美化网页 -->
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- 设置网页图标（favicon），显示在浏览器标签页的标题前面 -->
+</head>
+
+<body>
+    <!-- body 标签包含网页的主体内容，这里的内容会显示在浏览器窗口中 -->
+
+
+
+    <!-- ==================== 第二个页面：页面 ==================== -->
+    <div id="confession" class="container" style="display: none;">
+        <!-- 页面容器，初始也是隐藏的 -->
+        <!-- class="container" 应用通用的容器样式 -->
+
+        <img id="mainImage" src="assets/images/open.jpg" alt="">
+        <!-- 主图片，id="mainImage" 方便 JavaScript 动态更换图片 -->
+
+        <h1 id="question">周末出门吗？</h1>
+        <!-- 问题，id="question" 方便 JavaScript 动态修改文字 -->
+
+        <div>
+            <!-- 用一个 div 包裹两个按钮，方便布局 -->
+            <button id="yes">可以</button>
+            <!-- "可以"按钮，点击后进入成功页面 -->
+
+            <button id="no">不要</button>
+            <!-- "不要"按钮，点击后会触发有趣的挤压效果 -->
+        </div>
+    </div>
+
+    <!-- ==================== 第三个页面：成功页面 ==================== -->
+    <div id="success" style="display: none;">
+        <!-- 成功页面容器，初始也是隐藏的 -->
+
+        <h1 id="successText"></h1>
+        <!-- 成功文字，id="successText" 方便 JavaScript 动态设置内容 -->
+        <!-- 注意这里是空的，内容会由 JavaScript 动态填充 -->
+
+        <img src="assets/images/success.gif" alt="成功">
+        <!-- 成功图片 -->
+    </div>
+
+    <script src="script.js"></script>
+    <!-- 引入外部 JavaScript 文件，用来实现网页的交互功能 -->
+    <!-- 放在 body 结束标签前，确保 HTML 元素都加载完成后再执行 JavaScript -->
+</body>
+
+</html>
